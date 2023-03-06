@@ -205,7 +205,7 @@ const Record = () => {
                             mediaBlobUrl ?
                                 (
                                     <>
-                                        <video src={mediaBlobUrl} controls loop />
+                                        <video src={mediaBlobUrl} controls />
                                         <a href={mediaBlobUrl} download>
                                             <button><FaCloudDownloadAlt />Download</button>
                                         </a>
