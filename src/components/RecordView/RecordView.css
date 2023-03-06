@@ -1,0 +1,146 @@
+.main-recorder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.recording-status {
+    font-size: 1.2rem;
+    background-color: rgb(98, 94, 216);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    gap: 5px;
+    color: white;
+}
+
+.recording-status .rec-icon {
+    color: red;
+}
+
+.recording-status b {
+    text-transform: capitalize;
+    color: rgb(255, 194, 194);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.rec-heading {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.recording-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.options {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option input,
+.option label {
+    cursor: pointer;
+}
+
+.record-video video {
+    width: 500px;
+    height: 380px;
+    border-radius: 10px;
+}
+
+.record-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.recorded-content {
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recorded-content h3 {
+    text-decoration: underline;
+}
+
+.recording-btn {
+    display: flex;
+    gap: 20px;
+}
+
+.recording-btn button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+}
+
+.start-recording {
+    background-color: green;
+    color: white;
+}
+
+.stop-recording {
+    background-color: red;
+    color: white;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    html {
+        font-size: 14px
+    }
+
+    .record-video video {
+        width: 85vw;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .main-recorder {
+        padding: 20px 10px;
+    }
+
+    .options .option:nth-child(2),
+    .options .option:nth-child(4) {
+        display: none;
+    }
+
+    .main-body {
+        padding: 0px;
+    }
+
+}

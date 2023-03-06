@@ -1,0 +1,409 @@
+.main-recorder {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: white;
+}
+
+.main-recorder .left-main-recorder {
+    min-height: 90vh;
+    width: 70vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid black; */
+    color: white;
+    overflow-y: auto;
+}
+
+.main-recorder .left-main-recorder .recording-options {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-recorder .left-main-recorder .recording-options .rec-heading {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.main-recorder .left-main-recorder .recording-options .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px 20px 5px 20px;
+    border-radius: 10px;
+    /* width: 100vw; */
+}
+
+.main-recorder .left-main-recorder .recording-options .options .option {
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+}
+
+.main-recorder .left-main-recorder .recording-options .options .option label {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.main-recorder .left-main-recorder .recording-options .options .option input {
+    border: 0px;
+    width: 20px;
+    height: 1.2em;
+}
+
+.main-recorder .left-main-recorder .recording-options button {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.main-recorder .left-main-recorder .recording-options .recording-btn {
+    margin: 20px 0px;
+}
+
+.main-recorder .left-main-recorder .recording-status-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.main-recorder .left-main-recorder .recording-status-preview .recording-status {
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-recorder .left-main-recorder .recording-status-preview .recording-status b {
+    text-transform: capitalize;
+    color: rgba(246, 8, 8, 0.827);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.main-recorder .left-main-recorder .recording-status-preview .record-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.main-recorder .left-main-recorder .recording-status-preview .record-preview .preview-heading {
+    align-self: flex-start;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.main-recorder .left-main-recorder .recording-status-preview .record-preview .video-preview {
+    width: 300px;
+    /* max-height: 225.5px; */
+    min-height: 173px;
+    border: 2px solid white;
+    position: relative;
+}
+
+.main-recorder .left-main-recorder .recording-status-preview .record-preview .video-preview span.play-pause {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: red;
+    animation: animate 2s linear infinite;
+    font-size: 2rem;
+}
+
+.main-recorder .left-main-recorder .recording-status-preview .record-preview .video-preview span.muted {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: red;
+    font-size: 2rem;
+    z-index: 10;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+.main-recorder .left-main-recorder .recording-status-preview .record-preview .video-preview video {
+    width: 100%;
+    height: 100%;
+}
+
+.main-recorder .left-main-recorder .recording-status-preview .record-preview .recording-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-recorder .left-main-recorder .recording-status-preview .record-preview .recording-btn button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    gap: 2px;
+}
+
+.pause-recording,
+.resume-recording {
+    background-color: yellow;
+}
+
+.mute-recording,
+.unmute-recording {
+    background-color: orange;
+}
+
+.stop-recording {
+    background-color: red;
+    color: white;
+}
+
+.main-recorder .right-main-recorder {
+    width: 35vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    margin-right: 20px;
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 30px 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+/* Right Main Recorder */
+
+.main-recorder .right-main-recorder {
+    width: 30vw;
+    height: 90vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.main-recorder .right-main-recorder .heading {
+    background-color: rgba(217, 217, 217, 45%);
+    padding: 10px;
+}
+
+.main-recorder .right-main-recorder::-webkit-scrollbar {
+    width: 8px;
+    background-color: red;
+    border-radius: 10px;
+}
+
+.main-recorder .right-main-recorder::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.main-recorder .right-main-recorder .recorded-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-recorder .right-main-recorder .recorded-videos .ind-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.main-recorder .right-main-recorder .recorded-videos .ind-video video {
+    width: 300px;
+    max-height: 230px;
+}
+
+.main-recorder .right-main-recorder .recorded-videos .ind-video a {
+    text-decoration: none;
+}
+
+.main-recorder .right-main-recorder .recorded-videos .ind-video p {
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main-recorder .right-main-recorder .recorded-videos .ind-video button {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+/* Media Query */
+
+@media screen and (max-width: 1050px) {
+
+    .main-recorder .left-main-recorder {
+        width: 60vw;
+    }
+
+    .main-recorder .right-main-recorder {
+        width: 40vw;
+        padding: 20px 0px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .main-recorder .left-main-recorder {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px 10px;
+    }
+
+    .main-recorder .left-main-recorder .recording-options {
+        margin: 10px 20px;
+    }
+
+    .main-recorder .left-main-recorder .recording-options .options {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 20px 20px 5px 20px;
+        border-radius: 10px;
+    }
+
+    .main-recorder .left-main-recorder .recording-status-preview {
+        gap: 30px;
+    }
+
+    .main-recorder .right-main-recorder {
+        width: 40vw;
+        padding: 20px 0px;
+    }
+}
+
+@media screen and (max-width: 774px) {
+    .main-recorder {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .main-recorder .left-main-recorder {
+        width: 100vw;
+        min-height: auto;
+    }
+
+    .main-recorder .left-main-recorder .recording-status-preview .record-preview {
+        margin-bottom: 40px;
+    }
+
+    .main-recorder .right-main-recorder {
+        width: 100vw;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        height: auto;
+        margin: 20px 10px;
+    }
+
+    .main-recorder .left-main-recorder .recording-options {
+        gap: 10px;
+    }
+
+    .main-recorder .left-main-recorder .recording-options .recording-btn {
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .option:nth-child(2),
+    .option:nth-child(4) {
+        display: none !important;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .main-recorder .left-main-recorder .recording-status-preview .record-preview .video-preview {
+        width: 80vw;
+        min-height: 60.12vw;
+        border: 2px solid white;
+        position: relative;
+    }
+
+    .main-recorder .right-main-recorder .recorded-videos .ind-video video {
+        width: 95vw;
+        max-height: 71.42vw;
+    }
+
+    .main-recorder .left-main-recorder .recording-options .options {
+        padding: 5px;
+    }
+
+    .main-recorder .right-main-recorder {
+        width: 100vw;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        height: auto;
+        margin: 10px;
+    }
+}
